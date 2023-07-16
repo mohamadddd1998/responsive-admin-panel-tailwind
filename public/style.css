@@ -629,6 +629,18 @@ video {
   }
 }
 
+@font-face {
+  font-family: "Vazir";
+
+  src: url("../assets/fonts/Vazir.ttf") format("truetype");
+
+  src: url("../assets/fonts/Vazir.eot") format("eot");
+
+  src: url("../assets/fonts/Vazir.woff") format("woff");
+
+  src: url("../assets/fonts/Vazir.woff2") format("woff2");
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -22317,6 +22329,14 @@ video {
 
 .font-mono {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.font-vazir {
+  font-family: Vazir;
+}
+
+.font-display {
+  font-family: Vazir;
 }
 
 .text-xs {
@@ -52921,6 +52941,14 @@ video {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .sm\:font-vazir {
+    font-family: Vazir;
+  }
+
+  .sm\:font-display {
+    font-family: Vazir;
+  }
+
   .sm\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
@@ -83169,6 +83197,14 @@ video {
 
   .md\:font-mono {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  .md\:font-vazir {
+    font-family: Vazir;
+  }
+
+  .md\:font-display {
+    font-family: Vazir;
   }
 
   .md\:text-xs {
@@ -113421,6 +113457,14 @@ video {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .lg\:font-vazir {
+    font-family: Vazir;
+  }
+
+  .lg\:font-display {
+    font-family: Vazir;
+  }
+
   .lg\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
@@ -143671,6 +143715,14 @@ video {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .xl\:font-vazir {
+    font-family: Vazir;
+  }
+
+  .xl\:font-display {
+    font-family: Vazir;
+  }
+
   .xl\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
@@ -173919,6 +173971,14 @@ video {
 
   .\32xl\:font-mono {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  .\32xl\:font-vazir {
+    font-family: Vazir;
+  }
+
+  .\32xl\:font-display {
+    font-family: Vazir;
   }
 
   .\32xl\:text-xs {
