@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="custome.css" />
-    <title>کاربران</title>
+    <title>داشبورد</title>
   </head>
   <body dir="rtl" class="bg-gray-100 font-vazir text-sm">
     <section class="flex h-screen overflow-hidden">
@@ -45,6 +45,7 @@
               <svg
                 class="h-5 w-5"
                 fill="gray"
+                stroke="gray"
                 viewBox="0 0 2048 1792"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -56,16 +57,15 @@
             <a href="index.html">داشبورد</a>
           </li>
           <li
-            class="py-5 px-4 font-bold text-blue-500 cursor-pointer border-l-4 border-blue-500 hover:text-blue-500"
-            style="background: linear-gradient(0deg, #dbeafe 0, #f6f6f6 90%);"
+            class="py-5 px-4 text-gray-500 cursor-pointer hover:text-blue-500"
           >
             <figure class="ml-3 inline-block align-middle">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-5 w-5"
-                fill="#3b82f6"
+                fill="currentColor"
                 viewBox="0 0 24 24"
-                stroke="#3b82f6"
+                stroke="currentColor"
               >
                 <path
                   stroke-linecap="round"
@@ -78,21 +78,23 @@
             <a href="users.html">کاربران</a>
           </li>
           <li
-            class="py-5 px-4 text-gray-500 cursor-pointer hover:text-blue-500"
+            class="py-5 px-4 font-bold text-blue-500 cursor-pointer border-l-4 border-blue-500 hover:text-blue-500"
+            style="background: linear-gradient(0deg, #dbeafe 0, #f6f6f6 90%)"
           >
             <figure class="ml-3 inline-block align-middle">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-5 w-5"
                 viewBox="0 0 20 20"
-                fill="currentColor"
+                fill="#3b82f6"
+                stroke="#3b82f6"
               >
                 <path
                   d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"
                 ></path>
               </svg>
             </figure>
-            <a href="form.html">فرم</a>
+            <a href="">فرم</a>
           </li>
           <li
             class="py-5 px-4 text-gray-500 cursor-pointer hover:text-blue-500"
@@ -135,7 +137,7 @@
                 ></path>
               </svg>
             </figure>
-            <a href="">ثبت  نام</a>
+            <a href="">ثبت نام</a>
           </li>
         </ul>
         <nav class="py-5 px-4">
@@ -164,199 +166,49 @@
           </figure>
         </header>
         <section id="scroll" class="max-h-full overflow-auto p-5 mt-5">
-          <div class="flex bg-green-500 p-4 text-white rounded-lg">
-            <span class="text-lg cursor-pointer">×</span>
-            <nav class="text-center flex-1">
-              <a>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="#fff"
-                  viewBox="0 0 24 24"
-                  class="h-5 w-5 inline-block"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
-                  ></path>
-                </svg>
-                این یک پیام موفقیت آمیز است.
-              </a>
-            </nav>
-          </div>
-          <div class="flex p-4 text-gray-500 rounded-lg mt-10">
-            <span class="text-lg font-bold flex-1">کاربران</span>
-            <form onsubmit="return false" class="m-0">
+          <div >
+            <form onsubmit="return false"
+              class="flex flex-col text-center w-2/5 mx-auto bg-white rounded-xl shadow-lg"
+            >
+              <p class="text-center py-6 px-4 text-gray-500 relative" id="form__title">فرم ثبت کاربر</p>
+              <label for="name" class="text-right p-2 m-3 mb-0"
+                >نام <span class="text-red-600">*</span>
+              </label>
               <input
                 type="text"
+                id="name"
+                name="name"
+                class="outline-none ring-1 ring-gray-400 p-2 m-3 mt-0 focus:ring-2 focus:ring-purple-500 rounded-md"
                 placeholder="نام"
-                class="p-3 outline-none focus:ring-1 focus:ring-purple-600"
-              />
-              <button
-                class="p-3 bg-purple-600 text-white relative left-1 rounded-l-md"
-              >
-                فیلتر
-              </button>
+              /><br />
+
+              <label for="fname" class="text-right  p-2 m-3 mb-0"
+                >نام خانوادگی <span class="text-red-600">*</span>
+              </label>
+              <input
+                type="text"
+                id="fname"
+                name="fname"
+                class="outline-none ring-1 ring-gray-400 p-2 m-3 mt-0 focus:ring-2 focus:ring-purple-500 rounded-md"
+                placeholder="نام خانوادگی"
+              /><br />
+              <label for="email" class="text-right p-2 m-3 mb-0"
+                >ایمیل <span class="text-red-600">*</span>
+              </label>
+              <input
+                type="type"
+                id="email"
+                name="email"
+                class="outline-none ring-1 ring-gray-400 p-2 m-3 mt-0 focus:ring-2 focus:ring-purple-500 rounded-md"
+                placeholder="ایمیل"
+              /><br />
+
+              <input
+                type="submit"
+                value="افزودن"
+                class="outline-none p-3 m-3 mt-0 rounded-md bg-purple-700 text-white cursor-pointer" 
+              /><br />
             </form>
-          </div>
-          <div class="bg-white rounded-xl shadow-lg">
-            <div class="grid grid-cols-1 divide-y">
-              <div class="flex p-4">
-                <p class="w-2/5">کاربر</p>
-                <p class="w-1/5">نقش</p>
-                <p class="w-1/5">تاریخ ساخت</p>
-                <p class="w-1/5">وضعیت</p>
-                <p class="w-1/5">اقدامات</p>
-              </div>
-              <div class="flex py-6 px-4">
-                <nav class="w-2/5">
-                  <img
-                    src="../assets/image/photo.jpg"
-                    width="40"
-                    class="rounded-full cursor-pointer inline-block align-middle"
-                  />
-                  <span class="mr-2">محمد میرزایی</span>
-                </nav>
-                <p class="w-1/5">ادمین</p>
-                <p class="w-1/5">۱۴۰۰-۰۷-۱۲</p>
-                <p class="w-1/5">
-                  <span
-                    class="bg-green-200 rounded-lg text-green-700 px-3 py-1 cursor-pointer"
-                    >فعال</span
-                  >
-                </p>
-                <p class="w-1/5">
-                  <span
-                    class="bg-red-200 rounded-lg text-red-700 px-3 py-1 cursor-pointer"
-                    >حذف</span
-                  >
-                  <span
-                    class="bg-blue-200 rounded-lg text-blue-700 px-3 py-1 cursor-pointer"
-                    >ویرایش</span
-                  >
-                </p>
-              </div>
-              <div class="flex py-6 px-4">
-                <nav class="w-2/5">
-                  <img
-                    src="../assets/image/photo.jpg"
-                    width="40"
-                    class="rounded-full cursor-pointer inline-block align-middle"
-                  />
-                  <span class="mr-2">محمد میرزایی</span>
-                </nav>
-                <p class="w-1/5">ادمین</p>
-                <p class="w-1/5">۱۴۰۰-۰۷-۱۲</p>
-                <p class="w-1/5">
-                  <span
-                    class="bg-green-200 rounded-lg text-green-700 px-3 py-1 cursor-pointer"
-                    >فعال</span
-                  >
-                </p>
-                <p class="w-1/5">
-                  <span
-                    class="bg-red-200 rounded-lg text-red-700 px-3 py-1 cursor-pointer"
-                    >حذف</span
-                  >
-                  <span
-                    class="bg-blue-200 rounded-lg text-blue-700 px-3 py-1 cursor-pointer"
-                    >ویرایش</span
-                  >
-                </p>
-              </div>
-              <div class="flex py-6 px-4">
-                <nav class="w-2/5">
-                  <img
-                    src="../assets/image/photo.jpg"
-                    width="40"
-                    class="rounded-full cursor-pointer inline-block align-middle"
-                  />
-                  <span class="mr-2">محمد میرزایی</span>
-                </nav>
-                <p class="w-1/5">ادمین</p>
-                <p class="w-1/5">۱۴۰۰-۰۷-۱۲</p>
-                <p class="w-1/5">
-                  <span
-                    class="bg-green-200 rounded-lg text-green-700 px-3 py-1 cursor-pointer"
-                    >فعال</span
-                  >
-                </p>
-                <p class="w-1/5">
-                  <span
-                    class="bg-red-200 rounded-lg text-red-700 px-3 py-1 cursor-pointer"
-                    >حذف</span
-                  >
-                  <span
-                    class="bg-blue-200 rounded-lg text-blue-700 px-3 py-1 cursor-pointer"
-                    >ویرایش</span
-                  >
-                </p>
-              </div>
-              <div class="flex py-6 px-4">
-                <nav class="w-2/5">
-                  <img
-                    src="../assets/image/photo.jpg"
-                    width="40"
-                    class="rounded-full cursor-pointer inline-block align-middle"
-                  />
-                  <span class="mr-2">محمد میرزایی</span>
-                </nav>
-                <p class="w-1/5">ادمین</p>
-                <p class="w-1/5">۱۴۰۰-۰۷-۱۲</p>
-                <p class="w-1/5">
-                  <span
-                    class="bg-green-200 rounded-lg text-green-700 px-3 py-1 cursor-pointer"
-                    >فعال</span
-                  >
-                </p>
-                <p class="w-1/5">
-                  <span
-                    class="bg-red-200 rounded-lg text-red-700 px-3 py-1 cursor-pointer"
-                    >حذف</span
-                  >
-                  <span
-                    class="bg-blue-200 rounded-lg text-blue-700 px-3 py-1 cursor-pointer"
-                    >ویرایش</span
-                  >
-                </p>
-              </div>
-              <div class="flex py-6 px-4">
-                <nav class="w-2/5">
-                  <img
-                    src="../assets/image/photo.jpg"
-                    width="40"
-                    class="rounded-full cursor-pointer inline-block align-middle"
-                  />
-                  <span class="mr-2">محمد میرزایی</span>
-                </nav>
-                <p class="w-1/5">ادمین</p>
-                <p class="w-1/5">۱۴۰۰-۰۷-۱۲</p>
-                <p class="w-1/5">
-                  <span
-                    class="bg-green-200 rounded-lg text-green-700 px-3 py-1 cursor-pointer"
-                    >فعال</span
-                  >
-                </p>
-                <p class="w-1/5">
-                  <span
-                    class="bg-red-200 rounded-lg text-red-700 px-3 py-1 cursor-pointer"
-                    >حذف</span
-                  >
-                  <span
-                    class="bg-blue-200 rounded-lg text-blue-700 px-3 py-1 cursor-pointer"
-                    >ویرایش</span
-                  >
-                </p>
-              </div>
-              <nav class="flex p-4 justify-center">
-                <a class="p-2 ring-1 ring-gray-300 cursor-pointer">قبلی</a>
-                <a class="p-2 ring-1 ring-gray-300 cursor-pointer">۱</a>
-                <a class="p-2 ring-1 ring-gray-300 cursor-pointer">۲</a>
-                <a class="p-2 ring-1 ring-gray-300 cursor-pointer">۳</a>
-                <a class="p-2 ring-1 ring-gray-300 cursor-pointer">بعدی</a>
-              </nav>
-            </div>
           </div>
           <div class="mb-24"></div>
         </section>

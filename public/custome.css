@@ -30,3 +30,23 @@ fill: rgba(59, 130, 246);
 border-left: 4px solid rgba(59, 130, 246);
 background: linear-gradient(0deg, #dbeafe 0, #f6f6f6 90%); /* W3C */
 }
+#form__title::before{
+    position: absolute;
+    content: '';
+    width: 25%;
+    height: 1px;
+    background-color: #94a3b8;
+    right: 12%;
+    top: 50%;
+
+}
+#form__title::after{
+    position: absolute;
+    content: '';
+    width: 25%;
+    height: 1px;
+    background-color: #94a3b8;
+    left: 12%;
+    top: 50%;
+
+}
