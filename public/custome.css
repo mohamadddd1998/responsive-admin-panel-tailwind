@@ -19,14 +19,6 @@ border-radius: 10px;
 ::-webkit-scrollbar-thumb:hover {
 background: gray;
 }
-#sidebar__list li:nth-child(2) {
-border-left: 4px solid rgba(59, 130, 246);
-background: linear-gradient(0deg, #dbeafe 0, #f6f6f6 90%); /* W3C */
-color: rgba(59, 130, 246);
-}
-#sidebar__list li:nth-child(2) svg{
-fill: rgba(59, 130, 246);
-}
 #sidebar__list li:not(:first-child):hover {
 border-left: 4px solid rgba(59, 130, 246);
 background: linear-gradient(0deg, #dbeafe 0, #f6f6f6 90%); /* W3C */
